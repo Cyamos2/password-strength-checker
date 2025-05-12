@@ -1,44 +1,69 @@
-# password-strength-checker
-Python script that evaluates password strength based on common cybersecurity rules.
+# 🔐 Password Strength Checker (Python)
 
-# Password Strength Checker 🔐
+This is a modular Python script that evaluates whether a password is strong based on commonly recommended cybersecurity rules.
 
-This is a simple Python script that evaluates whether a password is strong based on common cybersecurity standards.
+## ✅ What It Checks
 
-## ✅ Features
+The script verifies if a password includes:
 
-The script checks for the following rules:
-- Minimum length of 12 characters
-- At least one number (`0–9`)
-- At least one uppercase letter (`A–Z`)
-- At least one special character (like `!`, `@`, `#`, etc.)
+- ✅ Minimum of 12 characters  
+- 🔢 At least one number (`0–9`)  
+- 🔠 At least one uppercase letter (`A–Z`)  
+- ❗ At least one special character (e.g., `!`, `@`, `#`, `%`)
 
-## 💻 How It Works
+## 🧠 How It Works
 
-The script uses loops and string methods to check each rule:
-- `len()` to check length
-- `.isdigit()` to find numbers
-- `.isupper()` to find uppercase letters
-- `.isalnum()` to detect special characters (by checking for non-alphanumeric)
+The script defines a function:
 
-## 📂 File
+```python
+check_password_strength(password)
+```
 
-- `password_strength_checker.py` — the main script
+You can call this function with any string to check its strength.
 
-## 🚀 Future Ideas
+### 🧪 Example:
+```python
+check_password_strength("CyberSafe123!")
+```
 
-- Allow user input instead of hardcoding the password
-- Check password strength on a scale (weak → strong)
-- Add regex for more advanced pattern matching
-- Build a GUI or web tool version
+Each rule is checked using loops and string methods like:
 
-## 📚 Why This Project?
+- `len()` to measure password length  
+- `.isdigit()` to find numeric characters  
+- `.isupper()` to detect uppercase letters  
+- `not .isalnum()` to find special characters
 
-This project is part of my cybersecurity-focused Python practice while preparing for the **CompTIA Security+** exam. It helps me:
-- Reinforce Python logic
-- Apply scripting to real security problems
-- Build hands-on coding confidence
+The script includes a standard Python entry point:
+
+```python
+if __name__ == "__main__":
+    test_password = "CyberSafe123"
+    check_password_strength(test_password)
+```
+
+## 🧰 File Structure
+
+```
+password_strength_checker.py
+README.md
+```
+
+## 🔄 Future Improvements
+
+- 🧑‍💻 Accept user input via `input()`  
+- 📊 Add password scoring (weak/medium/strong)  
+- 📝 Log results to a file or database  
+- 🖥️ Integrate with a GUI or web form  
+- 🔍 Add regex-based rules for more precision
+
+## 🧪 Why This Project?
+
+This project supports my **CompTIA Security+** exam prep by helping me:
+
+- 💡 Strengthen Python scripting skills  
+- 🔐 Practice secure coding logic  
+- 🛠️ Build real-world cybersecurity tools
 
 ---
 
-Feel free to clone, modify, or suggest improvements!
+✅ Feel free to clone, fork, or contribute!
